@@ -109,14 +109,7 @@ void SysIdLogger::ClearWhenReceived() {
   }
 }
 
-void SysIdLogger::UpdateThreadPriority() {
-  if constexpr (!frc::RobotBase::IsSimulation()) {
-    if (!frc::Notifier::SetHALThreadPriority(true, kHALThreadPriority) ||
-        !frc::SetCurrentThreadPriority(true, kThreadPriority)) {
-      throw std::runtime_error("Setting the RT Priority failed\n");
-    }
-  }
-}
+//void SysIdLogger::UpdateThreadPriority(){}
 
 SysIdLogger::SysIdLogger() {
   fmt::print("Initializing logger\n");
