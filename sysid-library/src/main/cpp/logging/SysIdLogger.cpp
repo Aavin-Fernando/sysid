@@ -109,7 +109,7 @@ void SysIdLogger::ClearWhenReceived() {
   }
 }
 
-//void SysIdLogger::UpdateThreadPriority(){}
+void SysIdLogger::UpdateThreadPriority(){}
 
 SysIdLogger::SysIdLogger() {
   fmt::print("Initializing logger\n");
